@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://fu4680tnta4u"]
+
+[ext_resource type="Script" path="res://joystick_button.gd" id="2_1whmd"]
+[ext_resource type="Script" path="res://player.gd" id="2_qad8w"]
+[ext_resource type="Script" path="res://boundary_marker.gd" id="3_epuac"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jaxjh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i8qpb"]
+height = 50.28
+
+[node name="Main" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Charge_button" type="Button" parent="Control" node_paths=PackedStringArray("shortcut_context")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+offset_right = 150.0
+grow_vertical = 0
+shortcut_context = NodePath(".")
+
+[node name="Joystick_button" type="TouchScreenButton" parent="Control"]
+visible = false
+shape = SubResource("CircleShape2D_jaxjh")
+script = ExtResource("2_1whmd")
+
+[node name="Joystick_base" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -290.0
+offset_right = 250.0
+offset_bottom = -90.0
+grow_vertical = 0
+
+[node name="Charge_bar" type="ProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 960.0
+offset_right = 1110.0
+offset_bottom = 990.0
+max_value = 1000.0
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(960, 540)
+script = ExtResource("2_qad8w")
+
+[node name="Polygon2D" type="Polygon2D" parent="Player"]
+rotation = -1.5708
+color = Color(0.940691, 0.553553, 0.187785, 1)
+polygon = PackedVector2Array(30, -40, 0, 30, -30, -40, 0, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-10, 0)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_i8qpb")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="BoundaryMarker" type="Node2D" parent="."]
+script = ExtResource("3_epuac")
