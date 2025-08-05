@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdtouciw2ewtu"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_6i6bb"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6i6bb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimedPuzzleButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="EndlessRunButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PvPChallengeButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Scoreboard" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RankLabel" type="Label" parent="Scoreboard"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ScoreLabel" type="Label" parent="Scoreboard"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LeaderBoardButton" type="Button" parent="Scoreboard"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

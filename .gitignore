@@ -1,3 +1,27 @@
 # Godot 4+ specific ignores
 .godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# Platform exports
 /android/
+ /ios/
+ /macos/
+ /windows/
+ /linux/
+
+# Temporary / cache files
+*.log
+*.tmp
+*.translation
+*.import
+*.import.cache
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
