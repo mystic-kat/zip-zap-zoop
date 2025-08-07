@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1754427421
+boundary_marker.gd::GDScript::-1::1740839891::0::1::::<>Node2D<>::
+icon.svg::CompressedTexture2D::637110620296727308::1740839783::1740839885::1::::<><>::
+joystick_button.gd::GDScript::-1::1740839891::0::1::::<>TouchScreenButton<>::
+menu.gd::GDScript::-1::1742671955::0::1::::<>Control<>::
+player.gd::GDScript::-1::1740839891::0::1::::<>CharacterBody2D<>::
+README.md::TextFile::-1::1740839783::0::1::::<><>::
+::res://scenes/::1752924779
+infinite_runner.tscn::PackedScene::8749091891264577884::1752924778::0::1::::<><>::
+main.tscn::PackedScene::394049698444695030::1752924778::0::1::::<><>::res://joystick_button.gd<>res://player.gd<>res://boundary_marker.gd
+menu.tscn::PackedScene::5023516947845242754::1752924778::0::1::::<><>::res://menu.gd
+pvp_challenge.tscn::PackedScene::8109903865972196987::1752924779::0::1::::<><>::
+::res://scenes/debris/::1738591846
+::res://scenes/effects/::1738591861
+::res://scenes/player/::1738591835
+::res://scenes/ui/::1738591854

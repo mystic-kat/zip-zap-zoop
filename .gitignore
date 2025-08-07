@@ -1,27 +1,30 @@
-# Godot 4+ specific ignores
-.godot/
-.import/
-export.cfg
+# ─── Godot Engine ──────────────────────────────
+.godot/                  # Editor config & cache
+.import/                 # Import cache
+export.cfg              # Local export settings
 export_presets.cfg
 
-# Platform exports
-/android/
- /ios/
- /macos/
- /windows/
- /linux/
+# ─── Asset Metadata Files (KEEP THESE) ─────────
+# ⚠️ Do NOT ignore *.import files! They're needed to load assets.
+# ⚠️ If you ignore them, your images/audio may break on other machines.
+# So we REMOVE *.import and *.import.cache from the ignore list!
 
-# Temporary / cache files
+# ─── Platform-Specific Export Builds ───────────
+/android/
+/ios/
+/macos/
+/windows/
+/linux/
+
+# ─── Temp / Cache Files ────────────────────────
 *.log
 *.tmp
 *.translation
-*.import
-*.import.cache
 
-# Editor settings
+# ─── Editor Configs (Optional) ─────────────────
 .vscode/
 .idea/
 
-# OS generated files
+# ─── OS Generated Trash ────────────────────────
 .DS_Store
 Thumbs.db
